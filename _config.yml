@@ -20,7 +20,7 @@ instagram_username: erdvis
 # Additional icon links
 additional_links:
 - title: Strava
-  icon: https://i.pinimg.com/474x/ed/2a/64/ed2a64f9a34b00ad2013bf23cc0dc162.jpg
+  icon: <i class="fa-brands fa-strava" style="color: #222222;"></i>
   url: https://www.strava.com/athletes/16517499
 # - title: another link
 #   icon: font awesome brand icon name (eg. fa-twitter) (https://fontawesome.com/icons?d=gallery&s=brands&m=free)
