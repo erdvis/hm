@@ -13,3 +13,4 @@ fetch(`https://graph.instagram.com/me/media?fields=id,media_type,media_url,capti
   .then(data => {
     // Process the data here
   });
+  
