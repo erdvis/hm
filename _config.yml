@@ -18,10 +18,6 @@ instagram_username: erdvis
 
 
 # Additional icon links
-.fab.fa-strava:hover {
-  color: #ffffff;
-  background-color: #ea4c89;
-}
 additional_links:
 - title: Strava
   icon: https://i.pinimg.com/474x/ed/2a/64/ed2a64f9a34b00ad2013bf23cc0dc162.jpg
