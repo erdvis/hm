@@ -106,6 +106,16 @@
         {% endfor %}
       </ul>
 
+      <script>
+        const icon = document.querySelector('.fab.fa-strava');
+icon.addEventListener('mouseover', () => {
+  icon.style.color = '#ffffff';
+});
+icon.addEventListener('mouseout', () => {
+  icon.style.color = '#222222';
+});
+      </script>
+
       {%- if site.email -%}
         <p>
           {{ site.email_title | default: "Email" }}: <a href="mailto:{{ site.email }}" target="_blank">{{ site.email | escape }}</a>
