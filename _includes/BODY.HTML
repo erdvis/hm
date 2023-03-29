@@ -1,10 +1,33 @@
+<!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>My Juicer Feed</title>
-  <script src="//assets.juicer.io/embed.js"></script>
+	<meta charset="utf-8">
+	<title>My Instagram Feed</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+		}
+
+		main {
+			flex: 1;
+		}
+
+		#juicer-feed {
+			margin-top: auto;
+		}
+	</style>
 </head>
 <body>
-  <div class="juicer-feed" data-feed-id="erdvis"></div>
+	<main>
+		<!-- Your main content here -->
+	</main>
+	<div id="juicer-feed">
+		<!-- Juicer feed container code here -->
+		<iframe src="https://www.juicer.io/api/feeds/erdvis/iframe" frameborder="0" width="100%" height="1000px"></iframe>
+	</div>
 </body>
 </html>
