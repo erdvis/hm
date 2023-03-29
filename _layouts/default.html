@@ -41,4 +41,14 @@
   {% endif %}
 </body>
 
+var stravaIcon = document.getElementById("strava-icon");
+stravaIcon.addEventListener("mouseover", function() {
+  stravaIcon.style.color = "#ffffff";
+  stravaIcon.style.backgroundColor = "#222222";
+});
+stravaIcon.addEventListener("mouseout", function() {
+  stravaIcon.style.color = "#222222";
+  stravaIcon.style.backgroundColor = "";
+});
+
 </html>
