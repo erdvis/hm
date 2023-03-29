@@ -3,7 +3,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>My Juicer Feed</title>
-  <script src="https://assets.juicer.io/embed.js"></script>
+
 
   <title>{{ site.name }} | {{ site.title }}</title>
   {%- seo title=false -%}
@@ -26,9 +26,17 @@
     {%- include gtag.html -%}
   {%- endif -%}
   
-  <script src="scripts/instagram-feed.js"></script>
-
-
-    <ul class="juicer-feed" data-feed-id="erdvis"></ul>
+  
   
 </head>
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>My Juicer Feed</title>
+  <script src="//assets.juicer.io/embed.js"></script>
+</head>
+<body>
+  <div class="juicer-feed" data-feed-id="erdvis"></div>
+</body>
+</html>
