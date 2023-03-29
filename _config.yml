@@ -2,9 +2,20 @@
 repository: Git repository where your resume will be hosted, only required if you are hosting on GitHub (eg. sproogen/modern-resume-theme)
 # favicon: Directory of your favicon (eg. images/favicon.ico)(optional)
 
+<head>
+  <style>
+    .fab.fa-strava:hover {
+      color: #ffffff;
+      background-color: #fc4c02;
+      border-radius: 50%;
+      padding: 5px;
+    }
+  </style>
+</head>
+
 # Personal info
 name: Deividas Stankūnas
-title: Casting Director
+title: Casting Director / Photographer / Voice Over Artist
 email: deividasstankunas9@gmail.com
 phone: +37060886951
 
