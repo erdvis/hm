@@ -9,6 +9,11 @@
   <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
   <link rel="shortcut icon" type="image/x-icon" href="{{ site.favicon | default: '/assets/favicon.ico' | relative_url }}">
 
+  <div class="instagram-feed-container">
+    <h2>My Instagram Feed</h2>
+    <div class="instagram-feed"></div>
+  </div>
+
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
   {%- endif -%}
@@ -18,4 +23,7 @@
   {%- if jekyll.environment == 'production' and site.gtag -%}
     {%- include gtag.html -%}
   {%- endif -%}
+  
+  <script src="scripts/instagram-feed.js"></script>
+  
 </head>

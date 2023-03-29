@@ -1,6 +1,4 @@
-.strava-icon:hover {
-  color: #ffffff; /* change the color to the opposite color */
-}
+
 
 .button--sacnite::before {
   content: '';
@@ -26,7 +24,7 @@
   vertical-align: middle;
   position: relative;
   z-index: 1;
-  -webkit-backface-visibility: visible;
+  -webkit-backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
   border-radius: 0;
   float: none;
