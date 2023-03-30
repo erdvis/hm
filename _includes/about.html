@@ -1,17 +1,13 @@
 <div class="container intro-container">
   <h3>{{ site.about_title | default: "About Me" }}</h3>
-  <div class="row clearfix">
-    <div class="{{ 'col-xs-12 ' }}{%- if site.about_profile_image -%}col-sm-8 col-md-9 col-print-12{%- endif -%}">
-      <div class="text-center">
-        {{ site.about_content | strip | markdownify }}
-      </div>
-    </div>
+  <div class="row clearfix flex-column-reverse flex-md-row">
     {%- if site.about_profile_image -%}
-      <div class="col-xs-12 col-sm-4 col-md-3 no-print">
-        <div class="text-center">
-          <span class="profile-img" style="background-image: url(https://scontent.fvno5-1.fna.fbcdn.net/v/t39.30808-6/331460215_527348242861934_1823954116003474899_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=4vJM6loIah4AX_HmGdV&_nc_ht=scontent.fvno5-1.fna&oh=00_AfB4j4U30FISQ2rLPfnccDkqZYfS-K_jeKqWDKaOIDZa8g&oe=6427E12D)"></span>
-        </div>
+      <div class="col-xs-12 col-md-4 text-center">
+        <span class="profile-img" style="background-image: url(https://scontent.fvno5-1.fna.fbcdn.net/v/t39.30808-6/331460215_527348242861934_1823954116003474899_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=4vJM6loIah4AX_HmGdV&_nc_ht=scontent.fvno5-1.fna&oh=00_AfB4j4U30FISQ2rLPfnccDkqZYfS-K_jeKqWDKaOIDZa8g&oe=6427E12D)"></span>
       </div>
     {%- endif -%}
+    <div class="{{ 'col-xs-12 ' }}{%- if site.about_profile_image -%}col-md-8{%- endif -%} text-center text-md-left">
+      {{ site.about_content | strip | markdownify }}
+    </div>
   </div>
 </div>
