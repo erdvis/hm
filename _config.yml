@@ -40,11 +40,12 @@ about_content: | # this will include new lines to allow paragraphs
   Hi, I'm Deividas, a dedicated and detail-oriented professional with a passion for project management as a casting director. With several years of experience in the entertainment industry, I've honed my skills in identifying and managing talent, overseeing complex projects, and working effectively with cross-functional teams.
 
 
-# Projects Section
-# projects_title: Projects #(Use this to override about projects section title)
-
 # Experience Section
 # experience_title: Experience #(Use this to override about experience section title)
+
+Project manager as casting director at Actors Agency Lithuania: In this role, I managed the casting process for various commercial and film projects, working closely with directors and production teams to identify and select the best candidates for each role. I also oversaw the day-to-day operations of the agency, including managing client relationships, coordinating talent schedules, and negotiating contracts.
+
+As an assistant project manager in the same Actors Agency Lithuania, I provided support on multiple projects simultaneously, helping to ensure that each project was completed on time, within budget, and to the satisfaction of stakeholders. I assisted with project planning, resource allocation, risk management, and quality control.
 
 # Education Section
 # education_title: Education #(Use this to override about education section title)
