@@ -42,8 +42,7 @@ about_content: | # this will include new lines to allow paragraphs
 
 # Experience Section
 # experience_title: Experience #(Use this to override about experience section title)
-
-about_content: |
+experience_content: |
 
 Project manager as casting director
 
