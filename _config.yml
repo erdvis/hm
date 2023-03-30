@@ -51,9 +51,11 @@ about_content: | # this will include new lines to allow paragraphs
 # More Section
 # more_title: A Little More About Me #(Use this to override about more section title)
 more_content: | # this will include new lines to allow paragraphs
-  This is where you can write a little more about yourself. You could title this section **Interests** and include some of your other interests.
+  My passion for cycling has led me to build my own bikes, both for MTB and road cycling. There's something special about building a bike from scratch and then taking it out for a spin, feeling the wind in my face and the freedom of the open road. It's a perfect way to clear my head and get some exercise at the same time. I enjoy both road and off-road cycling, and have competed in a few local events in the past.
 
-  Or you could title it **Skills** and write a bit more about things that make you more desirable, like *leadership* or *teamwork*
+ In addition to cycling, I enjoy photography as a way to capture memories and tell stories through images. I'm always learning new techniques and experimenting with different styles to create something truly unique.
+
+ Music production is another hobby that allows me to explore my creative side. I'm currently working on my first album, which is an exciting journey of experimentation and self-expression. There's something magical about creating a piece of music from scratch and watching it come to life. It's a challenging process, but one that's deeply rewarding.
 
 # Footer
 footer_show_references: true
