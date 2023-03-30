@@ -1,7 +1,7 @@
 # Experience template
 - layout: left
   company: Actors Agency
-  link: Actors Agency.lt
+  link: actorsagency.lt
   job_title: project manager as casting director
   dates: 2021-present
   quote: >
@@ -12,10 +12,10 @@
 # Experience template
 - layout: left
   company: Actors Agency
-  link: Actors Agency.lt
-  job_title: project manager as casting director
-  dates: 2021-present
+  link: actorsagency.lt
+  job_title: assistant project manager
+  dates: 2019-2020
   quote: >
 
   description: | # this will include new lines to allow paragraphs
-   fsdfsdf
+   As an assistant project manager in the same Actors Agency Lithuania, I provided support on multiple projects simultaneously, helping to ensure that each project was completed on time, within budget, and to the satisfaction of stakeholders. I assisted with project planning, resource allocation, risk management, and quality control.
