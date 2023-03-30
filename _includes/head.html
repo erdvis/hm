@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,26 +10,26 @@
   {%- seo title=false -%}
 
   <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
-  <link rel="shortcut icon" type="image/x-icon" href="{{ site.favicon | default: '/assets/favicon.ico' | relative_url }}">
+  <link rel="shortcut icon" type="image/x-icon" href="{{ '/bicycle.png' | relative_url }}">
 
 </head>
 
-<html lang="en">
-  <body>
-    
+<body>
+  <div class="container intro-container">
+    <h3>{{ site.about_title | default: "About Me" }}</h3>
+    <div class="row clearfix">
+      {%- if site.about_profile_image -%}
+        <div class="col-xs-12 col-sm-4 col-md-3 no-print">
+          <span class="profile-img" style="background-image: url(https://scontent.fvno5-1.fna.fbcdn.net/v/t39.30808-6/331460215_527348242861934_1823954116003474899_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=4vJM6loIah4AX_HmGdV&_nc_ht=scontent.fvno5-1.fna&oh=00_AfB4j4U30FISQ2rLPfnccDkqZYfS-K_jeKqWDKaOIDZa8g&oe=6427E12D)"></span>
+        </div>
+      {%- endif -%}
+      <div class="{{ 'col-xs-12 ' }}{%- if site.about_profile_image -%}col-sm-8 col-md-9 col-print-12{%- endif -%}">
+        {{ site.about_content | strip | markdownify }}
+      </div>
     </div>
+  </div>
 
-    {%- if jekyll.environment == 'production' and site.google_analytics -%}
-      {%- include google-analytics.html -%}
-    {%- endif -%}
-    {%- if jekyll.environment == 'production' and site.gtm -%}
-      {%- include gtm_head.html -%}
-    {%- endif -%}
-    {%- if jekyll.environment == 'production' and site.gtag -%}
-      {%- include gtag.html -%}
-    {%- endif -%}
+  <script src="{{ '/assets/main.js' | relative_url }}"></script>
+</body>
 
-
-    
-  </body>
 </html>
