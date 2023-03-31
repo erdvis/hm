@@ -9,9 +9,9 @@
         {%- include gtm_body.html -%}
       {%- endif -%}
       {%- include about.html -%}
-      <button id="download-button">Download as PDF</button>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-      <script>
+      <button id="download-button">Download as PDF</button>
+            <script>
         const downloadButton = document.getElementById('download-button');
         downloadButton.addEventListener('click', () => {
           const pdf = new jsPDF();
