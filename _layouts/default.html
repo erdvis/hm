@@ -23,9 +23,9 @@
     downloadButton.addEventListener('click', () => {
       downloadButton.style.display = "none"; // hide the download button before taking the screenshot
       html2canvas(document.body).then(canvas => {
-        
+        const imgData = canvas.toDataURL('image/png');
         const pdf = new jsPDF();
-        
+        pdf.addImage(imgData, 'PNG', 0, 0, pdf.internal.pageSize.getWidth(), pdf.internal.pageSize.getHeight());
         pdf.save('cv.pdf');
         downloadButton.style.display = "block"; // show the download button after the PDF is saved
       });
