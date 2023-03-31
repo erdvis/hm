@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: 'en' }}">
 
-<head>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-</head>
-
-
 {%- include head.html -%}
 
-<button id="download-button">Download as PDF</button>
-<script>
-  const downloadButton = document.getElementById('download-button');
-  downloadButton.addEventListener('click', () => {
+ <head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+ </head>
+
+ <button id="download-button">Download as PDF</button>
+
+ <script>
+   const downloadButton = document.getElementById('download-button');
+   downloadButton.addEventListener('click', () => {
     const pdf = new jsPDF();
     pdf.addHTML(document.body, () => {
-      pdf.save('cv.pdf');
+   pdf.save('cv.pdf');
     });
-  });
+   });
 </script>
 
 
