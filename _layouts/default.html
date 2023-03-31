@@ -8,6 +8,17 @@
       </div>
     </main>
     
+    <script>
+      // Add an event listener to the download button
+      document.getElementById("download-button").addEventListener("click", function() {
+        // Create a link element with the download URL and filename
+        var link = document.createElement("a");
+        link.href = "/Deividas Stankunas CV.pdf";
+        link.download = "Deividas Stankunas CV.pdf";
+        // Click the link to initiate the download
+        link.click();
+      });
+    </script>
   
     {%- if jekyll.environment == 'production' and site.gtm -%}
       {%- include gtm_body.html -%}
@@ -26,16 +37,6 @@
     {% if site.darkmode == false %}
       <script src="{{ '/assets/js/index.js' | relative_url }}"></script>
     {% endif %}
-    <script>
-      // Add an event listener to the download button
-      document.getElementById("download-button").addEventListener("click", function() {
-        // Create a link element with the download URL and filename
-        var link = document.createElement("a");
-        link.href = "/Deividas Stankunas CV.pdf";
-        link.download = "Deividas Stankunas CV.pdf";
-        // Click the link to initiate the download
-        link.click();
-      });
-    </script>
+    
   </body>
 </html>
