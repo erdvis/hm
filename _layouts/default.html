@@ -14,7 +14,7 @@
   </main>
 
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/3.2.1/jspdf.umd.min.js"></script>
+  <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
       
  <script>
@@ -23,7 +23,7 @@
     downloadButton.addEventListener('click', () => {
       downloadButton.style.display = "none"; // hide the download button before taking the screenshot
       html2canvas(document.body).then(canvas => {
-        const imgData = canvas.toDataURL('image/png');
+        
         const pdf = new jsPDF();
         pdf.addImage(imgData, 'PNG', 0, 0, pdf.internal.pageSize.getWidth(), pdf.internal.pageSize.getHeight());
         pdf.save('cv.pdf');
