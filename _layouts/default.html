@@ -1,49 +1,39 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: 'en' }}">
-  {%- include head.html -%}
-
-  <body class="{% if site.darkmode == true and site.darkmode != 'never' %}dark{% endif %}">
-    {%- include header.html -%}
-
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <button id="download-button">Download as PDF</button>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-
-        <script>
-          const downloadButton = document.getElementById('download-button');
-          downloadButton.addEventListener('click', () => {
-            const pdf = new jsPDF();
-            pdf.addHTML(document.body, () => {
-              pdf.save('cv.pdf');
-            });
+{% include head.html %}
+<body class="{% if site.darkmode == true and site.darkmode != 'never' %}dark{% endif %}">
+  {% include header.html %}
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      {%- if jekyll.environment == 'production' and site.gtm -%}
+        {%- include gtm_body.html -%}
+      {%- endif -%}
+      {%- include about.html -%}
+      <button id="download-button">Download as PDF</button>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+      <script>
+        const downloadButton = document.getElementById('download-button');
+        downloadButton.addEventListener('click', () => {
+          const pdf = new jsPDF();
+          pdf.addHTML(document.body, () => {
+            pdf.save('cv.pdf');
           });
-        </script>
-
-        {%- if jekyll.environment == 'production' and site.gtm -%}
-          {%- include gtm_body.html -%}
-        {%- endif -%}
-
-        {%- include about.html -%}
-
-        {%- if site.data.experience.size > 0 -%}
-          {%- include experience.html -%}
-        {%- endif -%}
-
-        {%- if site.data.education.size > 0 -%}
-          {%- include education.html -%}
-        {%- endif -%}
-
-        {%- if site.more_content -%}
-          {%- include more.html -%}
-        {%- endif -%}
-      </div>
-    </main>
-
-    {%- include footer.html -%}
-    {% if site.darkmode == false %}
-      <script src="{{ '/assets/js/index.js' | relative_url }}"></script>
-    {% endif %}
-  </body>
+        });
+      </script>
+      {% if site.data.experience.size > 0 %}
+        {%- include experience.html -%}
+      {% endif %}
+      {% if site.data.education.size > 0 %}
+        {%- include education.html -%}
+      {% endif %}
+      {% if site.more_content %}
+        {%- include more.html -%}
+      {% endif %}
+    </div>
+  </main>
+  {% include footer.html %}
+  {% if site.darkmode == false %}
+    <script src="{{ '/assets/js/index.js' | relative_url }}"></script>
+  {% endif %}
+</body>
 </html>
