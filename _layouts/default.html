@@ -14,35 +14,19 @@
   </main>
 
   
-  <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-      
+  <script src="https://www.princexml.com/prince.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+
  <script>
-    const jsPDF = window.jspdf.jsPDF;
-const downloadButton = document.getElementById('download-button');
-downloadButton.addEventListener('click', () => {
-  downloadButton.style.display = "none"; // hide the download button before taking the screenshot
-  html2canvas(document.body, {
-    scale: 1,
-    scrollX: 0,
-    scrollY: -window.scrollY,
-    windowWidth: document.documentElement.offsetWidth,
-    windowHeight: document.documentElement.offsetHeight
-}).then(canvas => {
-    const imgData = canvas.toDataURL('image/png');
-    const pdf = new jsPDF('l', 'pt', 'a4'); // 'l' for landscape
-    const imgProps = pdf.getImageProperties(imgData);
-    const pdfWidth = pdf.internal.pageSize.getWidth();
-    const pdfHeight = pdf.internal.pageSize.getHeight();
-    const imgWidth = pdfWidth;
-    const imgHeight = canvas.height * imgWidth / canvas.width;
-    pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
-    pdf.save('cv.pdf');
-    downloadButton.style.display = "block"; // show the download button after the PDF is saved
-});
-
-
-
+    const downloadButton = document.getElementById('download-button');
+    downloadButton.addEventListener('click', () => {
+        downloadButton.style.display = "none"; // hide the download button before taking the screenshot
+        const content = document.documentElement.outerHTML;
+        const blob = new Blob([content], { type: 'application/pdf' });
+        saveAs(blob, 'cv.pdf');
+        downloadButton.style.display = "block"; // show the download button after the PDF is saved
+    });
  </script>
 
  {%- if jekyll.environment == 'production' and site.gtm -%}
